@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "icp_eight": {
+      "main": "src/icp_eight/main.mo",
+      "type": "motoko"
+    },
+    "icp_eight_assets": {
+      "dependencies": [
+        "icp_eight"
+      ],
+      "frontend": {
+        "entrypoint": "src/icp_eight_assets/src/index.html"
+      },
+      "source": [
+        "src/icp_eight_assets/assets",
+        "dist/icp_eight_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.10.0",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
